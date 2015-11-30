@@ -11,6 +11,7 @@ app.proxy = true;
 app.use(logger());
 
 // middlewares
+app.use(require('koa-cors')());
 
 // routes
 app.use(require('./routes'));
