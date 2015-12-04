@@ -25,14 +25,15 @@ class Scraper {
 
   static formatItem($elem) {
     return {
-      image: Scraper.formatImageUri($elem.find('li:nth-child(2) img').attr('src')),
+      image: Scraper.formatUri($elem.find('li:nth-child(2) img').attr('src')),
+      link:  Scraper.formatUri($elem.find('li:nth-child(2) a').attr('href')),
       name:  $elem.find('p.name').text(),
       sold:  $elem.find('p.sold span').text(),
       price: +$elem.find('p.price span:nth-child(2)').text().match(/\d+/)
     };
   }
 
-  static formatImageUri(src) {
+  static formatUri(src) {
     return config.shopHost.queenshop + src;
   }
 
