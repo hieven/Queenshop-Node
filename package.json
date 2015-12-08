@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production node index",
     "dev": "NODE_ENV=development node index",
     "pm2": "NODE_ENV=development pm2 start index.js --watch",
-    "test": ""
+    "test": "NODE_ENV=test"
   },
   "author": "hiEven",
   "license": "MIT",
