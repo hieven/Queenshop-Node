@@ -7,7 +7,9 @@
     "start": "NODE_ENV=production node index",
     "dev": "NODE_ENV=development node index",
     "pm2": "NODE_ENV=development pm2 start index.js --watch",
-    "test": "NODE_ENV=test"
+    "test": "NODE_ENV=test",
+    "migration:up": "db-migrate up --config config/development.json -e pg",
+    "migration:down": "db-migrate down --config config/development.json -e pg"
   },
   "author": "hiEven",
   "license": "MIT",
