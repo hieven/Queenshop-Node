@@ -1,6 +1,4 @@
 node_modules
-config/*
-!config/default.json
-!config/index.js
-!config/errorCode.json
+config/development.json
+config/test.json
 npm-debug.log

@@ -6,9 +6,9 @@
   "pg": {
     "driver": "pg",
     "host": "localhost",
-    "port": "5432",
-    "database": "",
-    "username": "",
-    "password": ""
+    "port": "5434",
+    "database": "codeship_test",
+    "username": "codeship",
+    "password": "codeship"
   }
 }
