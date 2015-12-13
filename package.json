@@ -33,6 +33,7 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "co-mocha": "^1.1.2",
+    "db-migrate": "^0.9.23",
     "eslint": "^1.10.2",
     "eslint-plugin-mocha": "^1.1.0",
     "mocha": "^2.3.4",
