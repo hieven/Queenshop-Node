@@ -1,9 +1,7 @@
 'use strict';
-const sequelize = require('../../models').sequelize;
 
-const ERROR_CODE = {
-  'any.required': 1400
-};
+const sequelize = require('../../models').sequelize;
+const ERROR_CODE = require('../../config').ERROR_CODE;
 
 function handleSequelizeError(error) {
   if (error instanceof sequelize.ValidationError) {
@@ -14,8 +12,6 @@ function handleSequelizeError(error) {
       message: error.errors[0].message
     };
   }
-
-
 }
 
 function handleJoiError(error) {
@@ -23,6 +19,7 @@ function handleJoiError(error) {
   const message = error.details[0].message;
   const code    = ERROR_CODE[type] || 500;
 
+  error.status  = 403;
   return Object.assign({}, {code, type, message});
 }
 

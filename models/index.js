@@ -8,7 +8,11 @@ const sequelize = new Sequelize(config.pg.database, config.pg.username, config.p
   port: config.pg.port,
   dialect: 'postgres',
   native: true,
-  define: {paranoid: true}
+  define: {paranoid: true},
+  logging: function(string) {
+    if (process.env.NODE_ENV === 'test') return;
+    console.log(string);
+  }
 });
 
 const models = {

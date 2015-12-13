@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production node index",
     "dev": "NODE_ENV=development node index",
     "pm2": "NODE_ENV=development pm2 start index.js --watch",
-    "test": "NODE_ENV=test",
+    "test": "NODE_ENV=test mocha ./test/index",
     "migration:up": "db-migrate up --config config/development.json -e pg",
     "migration:down": "db-migrate down --config config/development.json -e pg"
   },
@@ -31,7 +31,12 @@
     "sequelize": "^3.14.2"
   },
   "devDependencies": {
+    "chai": "^3.4.1",
+    "co-mocha": "^1.1.2",
     "eslint": "^1.10.2",
-    "eslint-plugin-mocha": "^1.1.0"
+    "eslint-plugin-mocha": "^1.1.0",
+    "mocha": "^2.3.4",
+    "supertest": "^1.1.0",
+    "supertest-as-promised": "^2.0.2"
   }
 }

@@ -44,7 +44,7 @@ exports.create = function*() {
   }
 
   body = memberHelper.formatMember(member, email);
-  render.call(this, 200, body);
+  render.call(this, 201, body);
 };
 
 exports.show = function*() {
