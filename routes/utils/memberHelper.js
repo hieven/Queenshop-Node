@@ -1,7 +1,7 @@
 'use strict';
 
 const Promise = require('bluebird');
-const Joi     = Promise.promisifyAll(require('Joi'));
+const Joi     = Promise.promisifyAll(require('joi'));
 
 const memberCreateSchema = Joi.object().keys({
   name: Joi.string().trim().max(255).required(),
