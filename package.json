@@ -10,6 +10,7 @@
     "test": "NODE_ENV=test mocha ./test/index",
     "migration:up": "db-migrate up --config config/development.js -e pg",
     "migration:down": "db-migrate down --config config/development.js -e pg",
+    "test:db": "dropdb queenshop_test && createdb queenshop_test && db-migrate up --config config/test.js -e pg"
   },
   "author": "hiEven",
   "license": "MIT",
