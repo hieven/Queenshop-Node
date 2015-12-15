@@ -1,4 +1,4 @@
 node_modules
-config/development.json
-config/test.json
+config/development.js
+config/test.js
 npm-debug.log

@@ -7,8 +7,8 @@
     "driver": "pg",
     "host": "localhost",
     "port": "5432",
-    "database": "",
-    "username": "",
+    "database": "queenshop",
+    "username": "even",
     "password": ""
   }
 }
